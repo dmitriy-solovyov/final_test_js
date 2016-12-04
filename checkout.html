@@ -180,11 +180,11 @@
 					<div class="col-sm-3">
 						<div class="shopper-info">
 							<p>Shopper Information</p>
-							<form>
-								<input type="text" placeholder="Display Name">
-								<input type="text" placeholder="User Name">
-								<input type="password" placeholder="Password">
-								<input type="password" placeholder="Confirm password">
+							<form id="form1">
+								<input id="display_name" name="display_name" type="text" placeholder="Display Name">
+								<input id="user_name" name="user_name" type="text" placeholder="User Name">
+								<input id="password" name="password" type="password" placeholder="Password">
+								<input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password">
 							</form>
 							<a class="btn btn-primary" href="">Get Quotes</a>
 							<a class="btn btn-primary" href="">Continue</a>
@@ -194,20 +194,20 @@
 						<div class="bill-to">
 							<p>Bill To</p>
 							<div class="form-one">
-								<form>
-									<input type="text" placeholder="Company Name">
-									<input type="text" placeholder="Email*">
-									<input type="text" placeholder="Title">
-									<input type="text" placeholder="First Name *">
-									<input type="text" placeholder="Middle Name">
-									<input type="text" placeholder="Last Name *">
-									<input type="text" placeholder="Address 1 *">
-									<input type="text" placeholder="Address 2">
+								<form id="form2">
+									<input id="company_name" name="company_name" type="text" placeholder="Company Name">
+									<input id="email" name="email" type="text" placeholder="Email*">
+									<input id="title" name="title" type="text" placeholder="Title">
+									<input id="first_name" name="first_name" type="text" placeholder="First Name *">
+									<input id="middle_name" name="middle_name" type="text" placeholder="Middle Name">
+									<input id="last_name" name="last_name" type="text" placeholder="Last Name *">
+									<input id="address_1" name="address_1" type="text" placeholder="Address 1 *">
+									<input id="address_2" name="address_2" type="text" placeholder="Address 2">
 								</form>
 							</div>
 							<div class="form-two">
-								<form>
-									<input type="text" placeholder="Zip / Postal Code *">
+								<form id="form3">
+									<input id="zip" name="zip" type="text" placeholder="Zip / Postal Code *">
 									<select>
 										<option>-- Country --</option>
 										<option>United States</option>
@@ -230,10 +230,10 @@
 										<option>Canada</option>
 										<option>Dubai</option>
 									</select>
-									<input type="password" placeholder="Confirm password">
-									<input type="text" placeholder="Phone *">
-									<input type="text" placeholder="Mobile Phone">
-									<input type="text" placeholder="Fax">
+									<input id="confirm_password2" name="confirm_password2" type="password" placeholder="Confirm password">
+									<input id="phone" name="phone" type="text" placeholder="Phone *">
+									<input id="mobile_phone" name="mobile_phone" type="text" placeholder="Mobile Phone">
+									<input id="fax" name="fax" type="text" placeholder="Fax">
 								</form>
 							</div>
 						</div>
@@ -546,6 +546,8 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.js"></script>
+	<script src="js/validations.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
