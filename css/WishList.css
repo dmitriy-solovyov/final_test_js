@@ -1,8 +1,9 @@
 .nav_wishlist__container{
     position: absolute;
+    overflow: scroll;
     top: 100%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 400px;
     z-index: 999;
 }
 
