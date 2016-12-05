@@ -1,0 +1,12 @@
+.nav_wishlist__container{
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+}
+
+.nav_wishlist__container.opened{
+    visibility: visible;
+    background: rgba(255,0,0,.5);
+}
