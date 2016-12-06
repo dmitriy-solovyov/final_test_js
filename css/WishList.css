@@ -1,13 +1,27 @@
 .nav_wishlist__container{
+    visibility: hidden;
     position: absolute;
-    overflow: scroll;
-    top: 100%;
+    overflow-y: scroll;
+    top: calc(100% + 20px);
     width: 200px;
     height: 400px;
     z-index: 999;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -ms-transition:1s;
+    -o-transition:1s;
+    transition:1s;
+    opacity: 0;
+    background: rgba(255,0,0,.5);
 }
 
 .nav_wishlist__container.opened{
     visibility: visible;
-    background: rgba(255,0,0,.5);
+    opacity: 1;
+    top: 100%;
+    bottom: auto;
+}
+
+.nav_wishlist__list {
+    padding: 0;
 }
