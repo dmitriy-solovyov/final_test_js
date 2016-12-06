@@ -21,8 +21,12 @@ for(var i=0; i < products.length; i++) {
 
     table.append(template);
 
-
 }
+
+$('#total_price').text('$'+cart.getProductSum());
+templateLastRow = $($('#cart_last_row_template tbody').html());
+table.append(templateLastRow);
+
 
 $('.cart_quantity_up').click(function (e) {
     e.preventDefault();
