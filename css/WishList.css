@@ -3,8 +3,8 @@
     position: absolute;
     overflow-y: scroll;
     top: calc(100% + 20px);
-    width: 200px;
-    height: 400px;
+    width: 250px;
+    height: 200px;
     z-index: 999;
     -webkit-transition:1s;
     -moz-transition:1s;

@@ -45,10 +45,54 @@ $(document).ready(function () {
             var data = $(this).parents('.product-image-wrapper').children('.product_data').data(),
                 prod = Product.createFromData(data);
 
+            if(wishList.getProducts().length == 0){
+                $('.nav_wishlist__item').remove();
+            }
+
             wishList.addProduct(prod);
+
+            if(!isPresent(prod.name)){
+                var element = $('.nav_wishlist__list');
+
+                element.append('<li class=nav_wishlist__item>' + prod.name + '<i class="fa fa-times j-remove_wish_item" aria-hidden="true"></i></li>');
+
+                $('.nav_wishlist__list li:last').click(function (e) {
+                        var name = $(this).parent().text();
+                        wishList.removeProduct(name);
+                        $(this).closest('li').remove();
+                    });
+
+                // $('.j-remove_wish_item').on("click" , removeItem());
+                // $('.j-remove_wish_item').click(function (e) {
+                //     var name = $(this).parent().text();
+                //     wishList.removeProduct(name);
+                //     $(this).closest('li').remove();
+                // });
+            }
+
         });
     });
 });
+
+// function removeItem() {
+//     console.log("THIS: " +  $(this));
+//     var name = $(this).parent().text();
+//     wishList.removeProduct(name);
+//     $(this).closest('li').remove();
+// };
+
+var isPresent = function (productName) {
+    var elements = $('.nav_wishlist__item');
+    for(var i = 0; i < elements.length; i++){
+        console.log("PROD NAME: " + productName);
+        console.log("ITEM NAME: " + $(elements[i]).text());
+        if($(elements[i]).text() == productName){
+            return true;
+        }
+    }
+
+    return false;
+}
 
 $('.add-to-cart').click(function (e) {
     e.preventDefault();
